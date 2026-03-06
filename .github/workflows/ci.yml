@@ -84,9 +84,6 @@ jobs:
           - os: macos-latest
             target: aarch64-apple-darwin
             sidecar_target: darwin-arm64
-          - os: macos-13
-            target: x86_64-apple-darwin
-            sidecar_target: darwin-x64
           - os: ubuntu-latest
             target: x86_64-unknown-linux-gnu
             sidecar_target: linux-x64
@@ -140,7 +137,7 @@ jobs:
           TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD }}
 
       - name: Upload macOS artifacts
-        if: matrix.os == 'macos-latest' || matrix.os == 'macos-13'
+        if: matrix.os == 'macos-latest'
         uses: actions/upload-artifact@v4
         with:
           name: gRPC-UI-macos-${{ matrix.sidecar_target }}
