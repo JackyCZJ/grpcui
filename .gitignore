@@ -11,14 +11,32 @@ target/
 *.app
 *.dmg
 *.msi
+*.so
+*.dll
+*.dylib
+*.a
+*.o
+*.out
+coverage/
+*.coverprofile
 
 # Tauri
 src/src-tauri/target/
 src/src-tauri/gen/
 src/src-tauri/binaries/
+src/src-tauri/grpcui.db
+src/src-tauri/grpcui.db-*
+src/src-tauri/resources/libgrpc_codec_bridge.dylib
+src/src-tauri/resources/libgrpc_codec_bridge.so
+src/src-tauri/resources/grpc_codec_bridge.dll
+src/src-tauri/sidecar/grpc-sidecar-*
 
 # Go
 sidecar/grpc-sidecar
+tests/mocks/echo-server
+sidecar/ffi/libgrpc_codec_bridge.dylib
+sidecar/ffi/libgrpc_codec_bridge.so
+sidecar/ffi/grpc_codec_bridge.dll
 *.db
 
 # IDE
@@ -37,3 +55,8 @@ Thumbs.db
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Generated artifacts
+build/version.json
+src/coverage/
+src/tests_old_delete/
