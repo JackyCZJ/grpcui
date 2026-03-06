@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package test;
+
+service Greeter {
+  rpc SayHello (HelloRequest) returns (HelloReply);
+}
+
+service StreamingService {
+  rpc ServerStream (StreamRequest) returns (stream StreamResponse);
+  rpc ClientStream (stream StreamRequest) returns (StreamResponse);
+  rpc BidiStream (stream StreamRequest) returns (stream StreamResponse);
+  rpc ErrorStream (StreamRequest) returns (stream StreamResponse);
+}
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloReply {
+  string message = 1;
+}
+
+message StreamRequest {
+  string data = 1;
+  int32 count = 2;
+}
+
+message StreamResponse {
+  string data = 1;
+  int32 sequence = 2;
+}

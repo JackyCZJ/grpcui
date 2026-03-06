@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-surface-0: #0f0f1a;
+  --color-surface-1: #16162a;
+  --color-surface-2: #131328;
+  --color-surface-3: #2a2a3c;
+  --color-surface-4: #3a3a4c;
+  --color-surface-hover: #1f1f35;
+  --color-surface-editor: #1e1e2e;
+  --color-surface-soft: rgba(42, 42, 60, 0.5);
+
+  --color-primary: #e94560;
+  --color-primary-hover: #d63d56;
+  --color-primary-strong-hover: #ff6b6b;
+  --color-primary-soft: rgba(233, 69, 96, 0.2);
+  --color-primary-soft-10: rgba(233, 69, 96, 0.1);
+
+  --color-brand-start: #e94560;
+  --color-brand-end: #533483;
+  --color-connect: #533483;
+  --color-connect-hover: #6b4aa1;
+
+  --color-info-soft: #1f3b6d;
+  --color-info-soft-hover: #2a4f91;
+  --color-danger-soft: #3a1d2e;
+  --color-danger-soft-hover: #522842;
+  --color-subtle-button: #1a1a30;
+  --color-subtle-button-hover: #252543;
+  --color-danger-button: #2a1a1a;
+  --color-danger-button-hover: #3a2323;
+
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #d1d5db;
+  --color-text-muted: #9ca3af;
+  --color-text-subtle: #6b7280;
+  --color-danger-text: #fecaca;
+  --color-danger-text-weak: #fee2e2;
+
+  --color-body-bg: #1a1a2e;
+  --color-body-text: #eaeaea;
+  --color-scroll-track: #16213e;
+  --color-scroll-thumb: #0f3460;
+  --color-scroll-thumb-hover: #e94560;
+}
+
+:root[data-theme='light'] {
+  --color-surface-0: #ffffff;
+  --color-surface-1: #f8fafc;
+  --color-surface-2: #f1f5f9;
+  --color-surface-3: #d1d5db;
+  --color-surface-4: #cbd5e1;
+  --color-surface-hover: #eef2f7;
+  --color-surface-editor: #f8fafc;
+  --color-surface-soft: rgba(148, 163, 184, 0.28);
+
+  --color-primary: #dc3f58;
+  --color-primary-hover: #c9344d;
+  --color-primary-strong-hover: #b82f44;
+  --color-primary-soft: rgba(220, 63, 88, 0.18);
+  --color-primary-soft-10: rgba(220, 63, 88, 0.1);
+
+  --color-brand-start: #dc3f58;
+  --color-brand-end: #7c3aed;
+  --color-connect: #5b5ce2;
+  --color-connect-hover: #4a49c8;
+
+  --color-info-soft: #dbeafe;
+  --color-info-soft-hover: #bfdbfe;
+  --color-danger-soft: #fee2e2;
+  --color-danger-soft-hover: #fecaca;
+  --color-subtle-button: #e5e7eb;
+  --color-subtle-button-hover: #d1d5db;
+  --color-danger-button: #fee2e2;
+  --color-danger-button-hover: #fecaca;
+
+  --color-text-primary: #111827;
+  --color-text-secondary: #374151;
+  --color-text-muted: #6b7280;
+  --color-text-subtle: #9ca3af;
+  --color-danger-text: #b91c1c;
+  --color-danger-text-weak: #991b1b;
+
+  --color-body-bg: #f3f4f6;
+  --color-body-text: #111827;
+  --color-scroll-track: #e5e7eb;
+  --color-scroll-thumb: #cbd5e1;
+  --color-scroll-thumb-hover: #94a3b8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  background: var(--color-body-bg);
+  color: var(--color-body-text);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-scroll-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-scroll-thumb);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-scroll-thumb-hover);
+}
+
+/* Monaco Editor customization */
+.monaco-editor {
+  border-radius: 6px;
+}

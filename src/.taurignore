@@ -1,0 +1,4 @@
+# 忽略开发期 SQLite 数据库副文件，避免 tauri dev watcher 触发重启。
+src-tauri/grpcui.db
+src-tauri/grpcui.db-shm
+src-tauri/grpcui.db-wal
